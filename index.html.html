@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豪華客船コスタセレーナで行く 沖縄・台湾 5日間の旅</title>
+    <meta name="description" content="福岡発、沖縄から豪華客船コスタセレーナに乗船し、台湾の夜市を満喫する5日間の極上クルーズ旅行程表です。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-marine: #003b5c;
+            --tropical-cyan: #00b4d8;
+            --taiwan-red: #e63946;
+            --taiwan-gold: #f4a261;
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: #0a192f;
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hero_cruise.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(0.7);
+            transform: scale(1.05); /* slightly zoomed for parallax illusion */
+            animation: slowZoom 20s infinite alternate linear;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            max-width: 800px;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeInBody 1.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInBody {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 0.05em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            color: #d1e8fa;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #0a192f 0%, #003b5c 100%);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--tropical-cyan);
+            text-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Center Line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-badge {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--tropical-cyan);
+            border: 4px solid #0a192f;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 0 15px var(--tropical-cyan);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-badge {
+            transform: translateX(-50%) scale(1.2);
+            background: #fff;
+            color: var(--primary-marine);
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        /* Reveal animation class added by JS */
+        .timeline-content.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .date {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.5rem;
+            color: var(--tropical-cyan);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .day-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .schedule-list {
+            list-style: none;
+        }
+
+        .schedule-list li {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .time {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Specific day themes */
+        .day1 .day-title { color: #fff; }
+        .day2 { position: relative; }
+        .day2 .day-title { color: var(--taiwan-gold); text-shadow: 0 0 10px rgba(230, 57, 70, 0.4); }
+        .day2 .timeline-badge { background: var(--taiwan-red); box-shadow: 0 0 15px var(--taiwan-red);}
+        .day2 .date { color: var(--taiwan-gold); }
+        
+        .day3 .day-title { color: #8ecae6; }
+        .day4 .day-title { color: #00b4d8; }
+        .day5 .day-title { color: #90e0ef; }
+
+        /* Inline Images within Timeline */
+        .timeline-img-wrapper {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            height: 200px;
+        }
+        
+        .timeline-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .timeline-content:hover .timeline-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #020c1b;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer h2 {
+            color: var(--tropical-cyan);
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item, .timeline-item:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-end;
+                margin-bottom: 40px;
+            }
+            
+            .timeline-badge {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 70px);
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="serif">Costa Serena<br>Luxury Cruise</h1>
+            <p>福岡発 🌺 沖縄・台湾 5日間の夢の航海</p>
+            <div style="font-size: 1.2rem; font-weight: 300;">2024.4.9 - 4.13</div>
+        </div>
+        <div class="scroll-down" onclick="document.querySelector('#timeline').scrollIntoView({behavior: 'smooth'})">
+            ▼
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <h2 class="section-title">Itinerary - 旅程 -</h2>
+        
+        <div class="timeline">
+            
+            <!-- Day 1 -->
+            <div class="timeline-item day1">
+                <div class="timeline-badge">1</div>
+                <div class="timeline-content">
+                    <div class="date">4月9日 (水)</div>
+                    <h3 class="day-title serif">いざ沖縄へ！そしてクルーズ出航</h3>
+                    <ul class="schedule-list">
+                        <li><span class="time">07:15</span> ✈️ 福岡空港 出発</li>
+                        <li><span class="time">09:00</span> 🛬 那覇空港 到着 (港へ移動)</li>
+                        <li><span class="time">13:00</span> 🚢 沖縄より コスタセレーナ 出航！</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #ccc;">船内での豪華なランチや施設探索をお楽しみください。</p>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="timeline-item day2">
+                <div class="timeline-badge">2</div>
+                <div class="timeline-content">
+                    <div class="date">4月10日 (木)</div>
+                    <h3 class="day-title serif">台湾寄港・熱気あふれる夜市満喫</h3>
+                    <ul class="schedule-list">
+                        <li><span class="time">08:00</span> ⚓ 台湾（基隆港） 到着</li>
+                        <li><span class="time">日中</span> 🚶‍♂️ 基隆周辺散策・夜市で台湾グルメを満喫</li>
+                        <li><span class="time">16:00</span> 🚢 台湾（基隆港） 出航</li>
+                    </ul>
+                    <div class="timeline-img-wrapper">
+                        <img src="taiwan_night.png" alt="台湾 夜市 ネオン">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="timeline-item day3">
+                <div class="timeline-badge">3</div>
+                <div class="timeline-content">
+                    <div class="date">4月11日 (金)</div>
+                    <h3 class="day-title serif">終日クルージング＆沖縄帰港</h3>
+                    <ul class="schedule-list">
+                        <li><span class="time">午前</span> 🚢 終日クルージング</li>
+                        <li><span class="time">14:00</span> ⚓ 沖縄 到着（この日は船中泊）</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #ccc;">船内でのんびり過ごしたり、アクティビティに参加したりと自由な満喫時間を。</p>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="timeline-item day4">
+                <div class="timeline-badge">4</div>
+                <div class="timeline-content">
+                    <div class="date">4月12日 (土)</div>
+                    <h3 class="day-title serif">沖縄上陸・南国の海とホテルステイ</h3>
+                    <ul class="schedule-list">
+                        <li><span class="time">午前</span> 🛳️ コスタセレーナ 下船</li>
+                        <li><span class="time">日中</span> 🌴 沖縄観光（レンタカーやモノレールで）</li>
+                        <li><span class="time">夜</span> 🏨 沖縄のホテル 宿泊</li>
+                    </ul>
+                    <div class="timeline-img-wrapper">
+                        <img src="okinawa_beach.png" alt="沖縄 美しいビーチ">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="timeline-item day5">
+                <div class="timeline-badge">5</div>
+                <div class="timeline-content">
+                    <div class="date">4月13日 (日)</div>
+                    <h3 class="day-title serif">素晴らしい思い出とともに帰路へ</h3>
+                    <ul class="schedule-list">
+                        <li><span class="time">午前</span> ✈️ 那覇空港 出発</li>
+                        <li><span class="time">午前</span> 🛬 福岡空港 到着・帰宅</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #ccc;">お疲れ様でした！</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="serif">Bon Voyage</h2>
+        <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">Have a wonderful trip to Okinawa & Taiwan.</p>
+    </footer>
+
+    <script>
+        // Scroll reveal animation for timeline items
+        function reveal() {
+            var reveals = document.querySelectorAll(".timeline-content");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("reveal");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
